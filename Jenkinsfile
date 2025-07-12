@@ -16,6 +16,9 @@ pipeline {
 
         stage('Build Spring Boot App') {
             steps {
+            	echo 'Granting execute permission to mvnw...'
+        		sh 'chmod +x mvnw' // <--- เพิ่มบรรทัดนี้เข้าไป
+            
                 echo 'Building the application...'
                 sh './mvnw clean package'
             }

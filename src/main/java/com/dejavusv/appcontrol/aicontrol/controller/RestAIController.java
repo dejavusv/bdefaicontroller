@@ -1,5 +1,6 @@
 package com.dejavusv.appcontrol.aicontrol.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -14,7 +15,8 @@ public class RestAIController {
 	
 	@GetMapping("/"+"testconnect")
 	public ResponseEntity<List<ServiceResult>> getDepartmentList() {
-		List<ServiceResult> resultList =   null;
+		List<ServiceResult> resultList =   new ArrayList<ServiceResult>();
+		ServiceResult test = new ServiceResult();
 		
 	    if (resultList == null) {
 	        return ResponseEntity.notFound().build();
